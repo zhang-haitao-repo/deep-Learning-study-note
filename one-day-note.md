@@ -10,10 +10,10 @@
 >  1.07	0.98 <br>
 >  1.23	1.32 <br>
 >>答案：<br>
->>```python
->>y_hat = torch.tensor([2.33, 1.07, 1.23])
+```python
+  y_hat = torch.tensor([2.33, 1.07, 1.23])
   print(y_hat)
   y = torch.tensor([3.14, 0.98, 1.32])
   a = squared_loss(y_hat,y)
   print(a.sum())
->>```python
+```python
