@@ -12,8 +12,12 @@ y_hat        y
 该批量的损失函数的平均值为：
 答案：解题程序如下
 ```python
-  y_hat = torch.tensor([2.33, 1.07, 1.23])
-  print(y_hat)
-  y = torch.tensor([3.14, 0.98, 1.32])
-  a = squared_loss(y_hat,y)
-  print(a.sum())
+def squared_loss(y_hat, y): 
+    return (y_hat - y.view(y_hat.shape))**2 / 2
+y_hat = torch.tensor([2.33, 1.07, 1.23])
+print(y_hat)
+y = torch.tensor([3.14, 0.98, 1.32])
+a = squared_loss(y_hat,y)
+print(a.sum())
+```
+错误原因：没有仔细审题，题目问的是损失函数的平均值。
